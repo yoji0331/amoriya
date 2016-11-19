@@ -17,40 +17,66 @@ body{
 
 #center{
 	color: #fff;
-	border: 1px solid #fff;
 	text-align: center;
 	margin-right: 30px;
 	margin-left: 30px;
+	height: 100%;
 }
 
 
 #single{
 	box-sizing: border-box;
-	border: 1px solid red;
 	width: 100%;
 	background: #333333;
 }
 #pic{
 	box-sizing: border-box;
-	float: left;
-	padding-left: 15px;
-	padding-top: 30px;
-	border: 1px solid blue;
-	width: 50%;
 }
 #pic img{
 	width: 100%;
 }
 #text{
 	box-sizing: border-box;
-	float: right;
-	width: 45%;
-	padding-right: 15px;
-	padding-top: 20px;
 }
 
 .clear{
 	box-sizing: border-box;
 	clear: both;
 	height: 30px;
+}
+
+
+/* 画面の幅が769px以上(PC用) */
+@media screen and (min-width: 640px){
+	#pic{
+		float: left;
+		padding-left: 15px;
+		padding-top: 30px;
+		width: 50%;
+	}
+		#text{
+		float: right;
+		width: 45%;
+		padding-right: 15px;
+		padding-top: 20px;
+	}
+		.clear{
+		clear: both;
+		height: 30px;
+	}
+}
+
+/* 画面の幅が768pxまで(タブレット用) */
+
+/* 画面の幅が640pxまで(スマホ用) */
+@media screen and (max-width: 640px){
+	#pic{
+		padding: 30px 20px 0px;
+	}
+	#text{
+		padding: 0px 20px;
+	}
+	.clear{
+		height: 0px;		
+	}
 }
