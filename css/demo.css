@@ -1,0 +1,49 @@
+body{
+	background-color: #000000;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#header{
+	text-align: center;
+	font-size: 32px;
+	color: #00B7FF;
+}	
+
+#center{
+	box-sizing: border-box;
+	width: 90%;
+	text-align: center;
+	border:  1px solid #ffffff;
+	color: #9F9F9F;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: auto;
+}
+
+
+#single{
+	box-sizing: border-box;
+	width: auto;
+	padding: 0px;
+	background: #333333;
+}
+#pic{
+	box-sizing: border-box;
+	float: left;
+	width: 45%;
+}
+#text{
+	box-sizing: border-box;
+	float: right;
+	width: 45%;
+}
+
+.clear{
+	box-sizing: border-box;
+	clear: both;
+	height: 30px;
+}
