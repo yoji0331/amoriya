@@ -1,17 +1,16 @@
-/*function exp() {
+var data = {"id":"us-east-1:946d8701-75ad-4dbb-826a-86b3ea8fe5acA"};
+var url = 'https://ogl172l04a.execute-api.us-east-1.amazonaws.com/api';
 
-  var xhr= new XMLHttpRequest();
-  var msg = document.getElementById('message').value + "\n";
-
-  //document.getElementById('area').value += msg;
-  document.getElementById('message').value = "";
-
-  //Request Configuration
-  xhr.open("post","http://localhost:3000/");
-  xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-
-  var data = encodeURIComponent(msg);
-// データをリクエスト ボディに含めて送信する
-  xhr.send(data);
-}
-*/
+$(function(){
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: JSON.stringify(data),
+		success: function(res){
+			for(var i=0;i<res.Items.length;i++){
+				console.log(res.Items[i]);
+			}
+		},
+		contentType: "application/json"
+	});
+});

@@ -1,44 +1,81 @@
-body {
-  padding: auto;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
-  background-color: #000000;
-  background-position: center center; //画像を常に天地左右の中央に配置
-  background-repeat: no-repeat;       //画像をタイル状に繰り返し表示しない
-  background-attachment: fixed;       //コンテンツの高さが画像の高さより大きい時、動かないように固定
-  background-size: cover;             //表示するコンテナの大きさに基づいて、背景画像を調整
-  background-color: #464646;          //背景画像が読み込まれる前に表示される背景のカラー
-
+body{
+	background-color: #000000;
+	box-sizing: border-box;
+	position: relative;
+	text-align: center;
+	padding: 10px;
+	width: 100%;
 }
 
-.navbar-brand-center {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align:center;
-    margin: auto;
-    font-size: 24px;
-    font-style: normal;
-    color: #9F9F9F;
+#header{
+	text-align: center;
+	font-size: 32px;
+	color: #00B7FF;
+	display: inline-block;
+	padding: 10px;
+}	
+
+#center{
+	color: #fff;
+	text-align: center;
+	margin-right: 30px;
+	margin-left: 30px;
+	height: 100%;
 }
 
-a {
-  color: #00B7FF;
+
+#single{
+	box-sizing: border-box;
+	width: 100%;
+	background: #333333;
+}
+#pic{
+	box-sizing: border-box;
+}
+#pic img{
+	width: 100%;
+}
+#text{
+	box-sizing: border-box;
 }
 
-textarea {
-  resize: none;
+.clear{
+	box-sizing: border-box;
+	clear: both;
+	height: 30px;
 }
 
-table{
-  background-color: #FFFFFF;
+
+/* 画面の幅が769px以上(PC用) */
+@media screen and (min-width: 640px){
+	#pic{
+		float: left;
+		padding-left: 15px;
+		padding-top: 30px;
+		width: 50%;
+	}
+		#text{
+		float: right;
+		width: 45%;
+		padding-right: 15px;
+		padding-top: 20px;
+	}
+		.clear{
+		clear: both;
+		height: 30px;
+	}
 }
 
-input {
-  width: 50%;
-}
 
-.test1{
-  width: 100%;
+/* 画面の幅が640pxまで(スマホ用) */
+@media screen and (max-width: 640px){
+	#pic{
+		padding: 30px 20px 0px;
+	}
+	#text{
+		padding: 0px 20px;
+	}
+	.clear{
+		height: 0px;		
+	}
 }
