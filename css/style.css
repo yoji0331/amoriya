@@ -1,3 +1,5 @@
+
+
 body{
 	background-color: #000000;
 	box-sizing: border-box;
@@ -45,7 +47,6 @@ body{
 	height: 30px;
 }
 
-
 /* 画面の幅が769px以上(PC用) */
 @media screen and (min-width: 640px){
 	#pic{
@@ -66,7 +67,6 @@ body{
 	}
 }
 
-
 /* 画面の幅が640pxまで(スマホ用) */
 @media screen and (max-width: 640px){
 	#pic{
@@ -79,3 +79,4 @@ body{
 		height: 0px;		
 	}
 }
+
